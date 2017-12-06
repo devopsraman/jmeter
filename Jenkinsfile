@@ -6,6 +6,7 @@ node {
   sh '/usr/local/bin/jmeter -n -t /usr/local/bin/testplan.jmx -Jusers=250 -l /usr/local/bin/test/output.jtl -e -o /usr/local/bin/test/result'
   stage 'Publish Jmeter report'
   //perfReport "compareBuildPrevious: true, errorFailedThreshold: 10, errorUnstableThreshold: 0, excludeResponseTime: true, modePerformancePerTestCase: true, modeThroughput: true, sourceDataFiles: '/usr/local/bin/test/output.jtl' "
-   perfReport 'output.jtl'
+  // perfReport 'output.jtl'
+  perfReport compareBuildPrevious: true, errorFailedThreshold: 10, errorUnstableThreshold: 0, excludeResponseTime: true, modePerformancePerTestCase: true, modeThroughput: true, sourceDataFiles: ''
 }
 
