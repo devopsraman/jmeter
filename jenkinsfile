@@ -1,0 +1,4 @@
+node {
+  stage 'Run JMeter Test'
+  sh '/usr/local/bin/jmeter.sh -n -t /home/ubuntu/Jenkins_demo1.jmx -l test.jtl'
+}
