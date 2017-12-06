@@ -7,21 +7,13 @@ node {
   stage 'Publish Jmeter report'
   //perfReport "compareBuildPrevious: true, errorFailedThreshold: 10, errorUnstableThreshold: 0, excludeResponseTime: true, modePerformancePerTestCase: true, modeThroughput: true, sourceDataFiles: '/usr/local/bin/test/output.jtl' "
   // perfReport 'output.jtl'
-  step {
- 
- publishHTML(target:[
-   allowMissing: false, 
-   alwaysLinkToLastBuild: false, 
-   keepAll: false, 
-   reportDir: 'coverage', 
-   reportFiles: 'index.html', 
-   reportName: "HTML Report", 
-   reportTitles: 'R report'
- ])
-   
+  //step {
+
+  
+   publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'output', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
     
     
    // perfReport compareBuildPrevious: true, errorFailedThreshold: 10, errorUnstableThreshold: 0, excludeResponseTime: true, modePerformancePerTestCase: true, modeThroughput: true, sourceDataFiles: ''
-  }
+ // }
 }
 
