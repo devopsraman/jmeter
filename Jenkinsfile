@@ -9,7 +9,19 @@ node {
   // perfReport 'output.jtl'
   step {
  
-    perfReport compareBuildPrevious: true, errorFailedThreshold: 10, errorUnstableThreshold: 0, excludeResponseTime: true, modePerformancePerTestCase: true, modeThroughput: true, sourceDataFiles: ''
+ publishHTML(target:[
+   allowMissing: false, 
+   alwaysLinkToLastBuild: false, 
+   keepAll: false, 
+   reportDir: 'coverage', 
+   reportFiles: 'index.html', 
+   reportName: "HTML Report", 
+   reportTitles: 'R report'
+ ])
+   
+    
+    
+   // perfReport compareBuildPrevious: true, errorFailedThreshold: 10, errorUnstableThreshold: 0, excludeResponseTime: true, modePerformancePerTestCase: true, modeThroughput: true, sourceDataFiles: ''
   }
 }
 
