@@ -10,7 +10,7 @@ node {
   //step {
 
   
-   publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'output', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+   publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '/usr/local/bin/test', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
     
     
    // perfReport compareBuildPrevious: true, errorFailedThreshold: 10, errorUnstableThreshold: 0, excludeResponseTime: true, modePerformancePerTestCase: true, modeThroughput: true, sourceDataFiles: ''
