@@ -16,13 +16,7 @@ node {
     perfReport compareBuildPrevious: true, excludeResponseTime: true, modePerformancePerTestCase: true, modeThroughput: true, sourceDataFiles: '/usr/local/bin/test/*.jtl'
    // perfReport compareBuildPrevious: true, errorFailedThreshold: 10, errorUnstableThreshold: 0, excludeResponseTime: true, modePerformancePerTestCase: true, modeThroughput: true, sourceDataFiles: ''
  // }
-  post {
-        always {
-            mail to: devopsraman@gmail.com, subject: 'The Pipeline sucess :'
-        }
-        failure {
-            mail to: devopsraman@gmail.com, subject: 'The Pipeline failed :'
-        }
-    }
+  emailext body: 'hello', recipientProviders: [[$class: 'DevelopersRecipientProvider']], subject: 'hello', to: 'rthalla@sapient.com'
+  
 }
 
