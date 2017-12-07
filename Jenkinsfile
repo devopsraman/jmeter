@@ -18,10 +18,10 @@ node {
  // }
   post {
         always {
-            mail to: rthalla@sapient.com, subject: 'The Pipeline sucess :('
+            mail to: rthalla@sapient.com, subject: 'The Pipeline sucess :'
         }
         failure {
-            mail to: rthalla@sapient.com, subject: 'The Pipeline failed :('
+            mail to: rthalla@sapient.com, subject: 'The Pipeline failed :'
         }
     }
 }
