@@ -6,6 +6,7 @@ node {
   //echo "Running ${env.BUILD_ID} with ${env.JOB_NAME} on ${env.JENKINS_URL}"
   //sh '/usr/local/bin/jmeter -n -t /usr/local/bin/testplan.jmx -Jusers=250 -l /usr/local/bin/test/output.jtl -e -o /usr/local/bin/test/result'
   sh ' rm /usr/local/bin/test/output.jtl'  
+  sh ' rm /usr/local/bin/test/result/* '
   sh '/usr/local/bin/jmeter -n -t /usr/local/bin/test/786.jmx  -l /usr/local/bin/test/output.jtl -e -o /usr/local/bin/test/result'
   stage 'Publish Jmeter report'
   //perfReport "compareBuildPrevious: true, errorFailedThreshold: 10, errorUnstableThreshold: 0, excludeResponseTime: true, modePerformancePerTestCase: true, modeThroughput: true, sourceDataFiles: '/usr/local/bin/test/output.jtl' "
