@@ -17,7 +17,7 @@ node {
                  
                  '''
         
-      }
+           }
   //sh ' rm /usr/local/bin/test/*.jtl'  
   //sh ' rm  -rf /usr/local/bin/test/result/* '
   //sh '/usr/local/bin/jmeter -n -t /usr/local/bin/test/MVP1.0MaxLTV.v2.jmx  -l /usr/local/bin/test/output.jtl -e -o /usr/local/bin/test/result'
@@ -32,7 +32,7 @@ node {
    // perfReport compareBuildPrevious: true, excludeResponseTime: true, modePerformancePerTestCase: true, modeThroughput: true, sourceDataFiles: '/usr/local/bin/test/*.jtl'
    //perfReport compareBuildPrevious: true, errorFailedThreshold: 10, errorUnstableThreshold: 0, excludeResponseTime: true, modePerformancePerTestCase: true, modeThroughput: true, sourceDataFiles:'/usr/local/bin/test/*.jtl'
  // }
-  //emailext body: 'hello', recipientProviders: [[$class: 'DevelopersRecipientProvider']], subject: 'hello', to: 'devopsraman@gmail.com'
+  
   
 }
 
