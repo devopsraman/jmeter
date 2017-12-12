@@ -5,7 +5,7 @@ node {
   //sh '/usr/local/bin/jmeter -n -t /usr/local/bin/Jenkins_demo1.jmx -l test.jtl'
   //echo "Running ${env.BUILD_ID} with ${env.JOB_NAME} on ${env.JENKINS_URL}"
   //sh '/usr/local/bin/jmeter -n -t /usr/local/bin/testplan.jmx -Jusers=250 -l /usr/local/bin/test/output.jtl -e -o /usr/local/bin/test/result'
-      step {
+      steps {
              checkout scm 
              sh '''
                   rm $WORKSPACE/*.jtl
