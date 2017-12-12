@@ -7,15 +7,15 @@ node {
   //sh '/usr/local/bin/jmeter -n -t /usr/local/bin/testplan.jmx -Jusers=250 -l /usr/local/bin/test/output.jtl -e -o /usr/local/bin/test/result'
       steps {
              //checkout scm 
-             sh '''
-                  rm $WORKSPACE/*.jtl
-                  echo "## Running the tests"
-                  mkdir $WORKSPACE/jmeter/result
-                   cd "$WORKSPACE/jmeter"
+             //sh '''
+                 sh' rm $WORKSPACE/*.jtl '
+                  sh'echo "## Running the tests" '
+                 sh' mkdir $WORKSPACE/jmeter/result '
+                 sh'  cd "$WORKSPACE/jmeter" '
                    
-                   jmeter -n -t MVP1.0MaxLTV.v2.jmx -l $WORKSPACE/jmeter.jtl $WORKSPACE/jmeter/result
+                   sh 'jmeter -n -t MVP1.0MaxLTV.v2.jmx -l $WORKSPACE/jmeter.jtl $WORKSPACE/jmeter/result '
                  
-                 '''
+                // '''
         
            }
   //sh ' rm /usr/local/bin/test/*.jtl'  
