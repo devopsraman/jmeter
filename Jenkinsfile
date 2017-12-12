@@ -9,11 +9,11 @@ node {
              //checkout scm 
              //sh '''
                  sh' rm $WORKSPACE/*.jtl '
-                  sh'echo "## Running the tests" '
+       
                  sh' mkdir $WORKSPACE/jmeter/result '
                  sh'  cd "$WORKSPACE/jmeter" '
                    
-                   sh 'jmeter -n -t MVP1.0MaxLTV.v2.jmx -l $WORKSPACE/jmeter.jtl $WORKSPACE/jmeter/result '
+                   sh ' jmeter -n -t MVP1.0MaxLTV.v2.jmx -l $WORKSPACE/jmeter.jtl $WORKSPACE/jmeter/result '
                  
                 // '''
         
